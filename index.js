@@ -242,11 +242,13 @@ Create a function called get20s() that takes data as an argument and returns an 
 function get20s(arr){
   let twenties=[]
     for(i=0; i<arr.length; i++){
-      if (arr[i].years>"1900" && arr[i].years<"2000"){twenties.push(arr[i])
+      let n=arr[i].years.split("-")
+      if (n[0]>"1900" && n[1]<"2000"){twenties.push(arr[i])
       }
     }
     return(twenties)
   }
+
   
 
 
