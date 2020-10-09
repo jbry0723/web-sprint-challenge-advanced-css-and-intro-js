@@ -216,8 +216,8 @@ console.log(artists[2].bio)
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
-function changeName(arr, ind, name){
-  arr[ind].name=name;
+function changeName(arr, ind, newname){
+  arr[ind].name=newname;
   return(arr)
 }
 
@@ -345,11 +345,16 @@ function getHTML(/* Code here */){
 /* 💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪
 Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
 
-function randomize(/* Code here */){
-
-    /* Code here */
-
-  }
+function randomize(arr){
+  let randomizedArr=[]
+  let looplength=arr.length
+    for(i=0; i<looplength; i++){
+      let n=((Math.floor(Math.random()*Math.floor (arr.length))))
+      randomizedArr.push(arr[n])
+      arr.splice(n, 1)
+    }
+return randomizedArr
+}
 
 
  /* 💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪
